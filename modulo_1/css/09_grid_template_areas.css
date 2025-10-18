@@ -1,0 +1,22 @@
+.layout{
+
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    gap: 20px;
+    grid-template-columns: 1fr 3fr;
+}
+
+header{ grid-area: header; background-color: rgb(37, 16, 133);}
+aside{ grid-area: aside; background-color: rgb(236, 54, 84);}
+main{ grid-area: main; background-color: rgb(105, 209, 195);}
+footer{ grid-area: footer; background-color: rgb(146, 221, 47);}
+
+.layout > * {
+    padding: 20px;
+    color: white;
+    
+}
+
