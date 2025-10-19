@@ -1,0 +1,14 @@
+.boton {
+    background-color: #52064e; /* Green */
+    border: none;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.5x, ease-in-out;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #d8b861;
+}

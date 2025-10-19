@@ -1,0 +1,18 @@
+@keyframes mover {
+    0% {transform: translateX(0); background-color: rgb(190, 137, 112);}
+    50% {transform: translateX(200px); background-color: rgb(247, 180, 104);}
+    100% {transform: translateX(0); background-color: rgb(63, 4, 4);}
+}
+
+.caja {
+   width: 100px;
+   height: 100px;
+   background-color: red;
+   animation: mover 3s infinite ease-in-out;
+   display: flex;
+   align-items: center;
+   color: white;
+   border-radius: 8px;
+   margin: 50px;
+
+}

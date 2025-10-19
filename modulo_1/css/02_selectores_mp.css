@@ -1,0 +1,23 @@
+h1{
+    columns: rgb(153, 0, 255);
+}
+
+.tipo_clase{
+    color: rgb(61, 42, 165);
+}
+
+#selector_id{
+    color: green;
+}
+
+* {
+    margin: 0;
+}
+
+div p {
+    color: rgb(138, 17, 168);
+}
+
+ul > li {
+    color: rgb(10, 10, 10);
+}
