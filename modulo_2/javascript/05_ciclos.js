@@ -13,3 +13,4 @@ let pais = "Ecuador";
 for(let i=1; i<pais.length; i++){
     console.log(pais[i]);
 } 
+
