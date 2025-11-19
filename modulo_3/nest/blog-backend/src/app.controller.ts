@@ -5,16 +5,13 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get() // ruta principal '/'
   getHello(): string {
     return this.appService.getHello();
   }
-  @Get('my-new-endpoint')
-  getMyNewEndpoint(): string {
-    return this.appService.getMyNewEndpoint();
-  }
-  @Get('health')
-  getHealth(): string {
-    return this.appService.getHealth();
+
+  @Get('health') // ruta '/health'
+  getHealth(): object {
+    return this.appService.health();
   }
 }

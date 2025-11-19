@@ -1,20 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { version } from 'os';
 
 @Injectable()
 export class AppService {
   getHello(): string {
     return 'Hello World!';
   }
-  getMyNewEndpoint(): string {
-    return 'Hello desde MyNewEndpoint!';
-  }
 
-  getHealth(): any {
+  health(): object {
     return {
-      service: 'Blog backend API',
-      version: '0.0.1',
-
-    }
+      service: 'Blog Backend Api',
+      status: 'Online',
+    };
   }
 }
