@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body, Put, Patch, Delete } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Put, Patch, Delete, Query } from '@nestjs/common';
 import { BasicsService } from './basics.service';
 
 @Controller('basics')
@@ -50,4 +50,34 @@ export class BasicsController {
       return this.basicsService
         .licencia(bodyData);
     }
+
+    @Post('area-triangulo')
+    areaTriangulo(@Body() bodyData: object){
+      return this.basicsService
+        .areaTriangulo(bodyData);
+    }
+    @Post('calcular-mayor')
+    calcularMayor(@Body() bodyData: object){
+      return this.basicsService
+      .calcularMayor(bodyData); 
+    }
+    @Get('calcular-promedio/:nota1/:nota2/:nota3')
+    promedio(
+      @Param('nota1') nota1:number,
+      @Param('nota2') nota2:number,
+      @Param('nota3') nota3:number
+    ): object {
+      return this.basicsService
+      .calcularPromedio(nota1, nota2, nota3);
+    }
+    @Get('verificar-credito')
+    verificarCredito(
+      @Query('edad') edad:number,
+      @Query('ingresos') ingresos:number,
+      @Query('historialCrediticio') historialCrediticio:string,
+    ){
+      return this.basicsService
+      .verificarCredito(edad, ingresos, historialCrediticio);
+    }
 }
+

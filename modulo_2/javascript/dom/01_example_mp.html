@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="01_example_mp.js" defer></script>
+        <title>Control de Acceso Alivida</title>
+    </head>
+    <body>
+        <h1>Registro de Vehículos en Garita</h1>
+        <p>Ingresa el número de vehículos y selecciona el tipo de acceso</p>
+
+        <input type="number" id="valor_cuenta" placeholder="Cantidad de vehículos">
+
+        <select id="propina">
+            <option>Residentes</option>
+            <option>Visitantes</option>
+            <option>Delivery</option>
+        </select>
+
+        <input type="number" id="personas" placeholder="Número de acompañantes">
+
+        <br>
+        <button id="calcular">Registrar</button>
+
+        <div id="resultado"></div>
+    </body>
+</html>

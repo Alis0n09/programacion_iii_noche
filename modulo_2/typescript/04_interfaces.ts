@@ -4,26 +4,26 @@ interface Usuario {
     correo: string
 }
 
-const usuario1: Usuario = {
+const usuario0: Usuario = {
     id: 1,
     nombre: "Juan Pérez",
     correo: "juan.perez@example.com"
 }
 
-console.log(usuario1);
-console.log(usuario1.nombre);
+console.log(usuario0);
+console.log(usuario0.nombre);
 
 interface Producto {
     id: number;
     nombre: string;
     precio?: number;
 }
-const producto1: Producto = {
+const producto0: Producto = {
     id: 1,
     nombre: "Laptop",
     precio: 1500
 }
-const producto2: Producto = {
+const producto1: Producto = {
     id: 2,
     nombre: "Smartphone",
     

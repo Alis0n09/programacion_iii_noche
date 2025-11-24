@@ -81,5 +81,62 @@ export class BasicsService {
       parameter: body,
       respuesta: respuesta,
     };
+    
   }
+areaTriangulo(parameter:any): object{
+    const area = (parameter.base*parameter.altura)/2;
+    return{
+      service: 'Blog Backend API',
+      function: 'basics peticion post',
+      message: 'Funcion por parametro',
+      parameter: parameter,
+      area: area,
+    }
+  }
+  calcularMayor(parameter:any): object{
+    let mayor:number;
+    if(parameter.valor1>parameter.valor2){
+      mayor= parameter.valor1;
+    }else{
+      mayor=parameter.valor2;
+    }if(parameter.valor3>mayor){
+      mayor=parameter.valor3
+    }
+    return {
+      service: 'Blog Backend API',
+      function: 'basics peticion post',
+      message: 'Funcion por parametro',
+      parameter: parameter,
+      mayor: mayor,
+    }
+  }
+  calcularPromedio(nota1: number, nota2: number, nota3: number): object {
+    const promedio = (nota1 + nota2 + nota3) / 3;
+    return {
+      service: 'Blog Backend API',
+      function: 'basics peticion get',
+      message: 'Funcion por parametro',
+      nota1: nota1,
+      nota2: nota2,
+      nota3: nota3,
+      promedio: promedio,
+    };  
+  }
+  verificarCredito(edad: number, ingresos: number, historialCrediticio: string): object {
+    let elegible: string;
+    if (edad >= 21 && ingresos >= 30000 && historialCrediticio === 'bueno') {
+      elegible = 'Elegible para crédito';
+    } else {
+      elegible = 'No elegible para crédito';
+    }
+    return {
+      service: 'Blog Backend API',
+      function: 'basics peticion get',
+      message: 'Funcion para verificar credito',
+      edad: edad,
+      ingresos: ingresos,
+      historialCrediticio: historialCrediticio,
+      elegible: elegible,
+    };
+  } 
 }
